@@ -1,0 +1,1352 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta name="keywords" content="hair accessories, knickers, hair bonnets, head bands, lip glosses, sunglasses, hair bows, scrunchies, hair clip, lip oils, lip serum, oil perfumes, showering gloves, ladies outfit, makeup products, girly store, women's fashion">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://winniesgirlystore.com/">
+
+<meta property="og:title" content="WINNIE'S GIRLY STORE">
+
+<meta property="og:description" content="Shop hair accessories, makeup, outfits & more for girls.">
+
+<meta property="og:image" content="https://winniesgirlystore.com/display.webp">
+
+<meta name="twitter:card" content="summary_large_image">
+
+
+
+<meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>WINNIE'S GIRLY STORE — Nastygirls Preview</title>
+
+<meta name="description" content="WINNIE'S GIRLY STORE — Hair accessories, makeup, outfits & more. Modern responsive demo (Nastygirls style)." />
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+<style>
+/* ===============================
+   GLOBAL & HERO FIXES
+================================= */
+#heroCarousel img {
+  width: 100%;
+  height: 100%;
+  /* COVER ensures the hero banner is always full without white gaps */
+  object-fit: cover; 
+  object-position: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   PREMIUM ECOMMERCE CARDS
+================================= */
+.card {
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+  transition: transform 0.6s cubic-bezier(.22,.61,.36,1),
+              box-shadow 0.6s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.15),
+    0 10px 25px rgba(255,105,180,0.15);
+}
+
+/* IMAGE HOLDER (The Placeholder) */
+.hover-rotate {
+  position: relative;
+  width: 100%;
+  /* Keeps the placeholder a perfect square regardless of screen size */
+  aspect-ratio: 1 / 1; 
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff, #ffeaf3);
+}
+
+/* Glass lighting effect */
+.hover-rotate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left,
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0) 60%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Images: Optimized for Responsiveness */
+.hover-rotate img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* COVER: Image fills the square placeholder entirely */
+  object-fit: cover; 
+  /* Removed padding to ensure the image touches all edges */
+  padding: 0; 
+  transition: opacity .7s ease, transform .9s cubic-bezier(.22,.61,.36,1), filter .6s;
+}
+
+/* Smooth Fade & Zoom Hover Logic */
+.hover-rotate img:not(:first-child) {
+  opacity: 0;
+  transform: scale(1.1); /* Starts slightly larger for a zoom-in effect */
+}
+
+.hover-rotate:hover img:first-child {
+  opacity: 0;
+  transform: scale(1.1);
+  filter: blur(4px); /* Smoother transition blur */
+}
+
+.hover-rotate:hover img:not(:first-child) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 640px) {
+  .card:hover {
+    transform: none;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  }
+}
+
+/* ===============================
+   BRANDING
+================================= */
+.brand-pink {
+  background: linear-gradient(90deg, #ff9ccf, #ff6fa3);
+}
+
+.brand-pink h1,
+.brand-pink p,
+.brand-pink a,
+.brand-pink button {
+  color: #fff !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+</style>
+
+<link rel="icon" href="favicon.ico">
+
+</head>
+
+
+
+<body class="min-h-screen bg-gray-50 text-gray-800 antialiased">
+
+ <!-- Header -->
+
+<header class="brand-pink text-white">
+
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+
+    <a href="#" class="flex items-center gap-3">
+
+      <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold">W</div>
+
+      <div>
+
+        <h1 class="text-xl font-extrabold leading-none">WINNIE'S GIRLY STORE</h1>
+
+        <p class="text-xs opacity-90">Everything pretty — hair, makeup & vibes</p>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- Desktop search -->
+
+    <div class="hidden md:flex items-center gap-4">
+
+      <div class="relative w-80">
+
+        <input id="search" type="search" placeholder="Search products..." class="w-full rounded-full px-4 py-2 text-sm outline-none text-gray-700" />
+
+        <button onclick="searchSite()" class="absolute right-1 top-1/2 -translate-y-1/2 bg-pink-600 text-white rounded-full px-3 py-1 text-sm">Search</button>
+
+      </div>
+
+      <a href="https://wa.me/256700228249" target="_blank" rel="noopener" class="bg-white text-pink-600 px-4 py-2 rounded-full font-semibold">Contact / WhatsApp</a>
+
+    </div>
+
+
+
+    <!-- Mobile hamburger -->
+
+    <div class="md:hidden">
+
+      <button id="menuBtn" class="p-2 bg-white/20 rounded-full text-2xl">☰</button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- Mobile Menu -->
+
+<div id="mobileMenu" class="fixed inset-0 bg-black/70 z-40 hidden transition-opacity duration-300">
+
+  <div class="absolute right-0 w-3/4 max-w-xs bg-white h-full p-6 flex flex-col">
+
+    <button class="mb-4 text-pink-600 font-semibold" onclick="toggleMenu()">✕ Close</button>
+
+    <div class="relative mb-4">
+
+      <input id="searchMobile" type="search" placeholder="Search products..." class="w-full border rounded-full px-4 py-2 text-sm text-gray-700" />
+
+      <button onclick="searchSite(true)" class="absolute right-1 top-1/2 -translate-y-1/2 bg-pink-600 text-white rounded-full px-3 py-1 text-sm">Go</button>
+
+    </div>
+
+    <nav class="space-y-3 text-gray-800">
+
+      <a href="#categories" class="block font-semibold" onclick="toggleMenu()">Categories</a>
+
+      <a href="#videos" class="block font-semibold" onclick="toggleMenu()">Videos</a>
+
+      <a href="https://wa.me/256700228249" target="_blank" class="block font-semibold">WhatsApp</a>
+
+    </nav>
+
+    <div class="pt-4 mt-auto border-t flex gap-4 text-pink-600 text-xl">
+
+      <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+
+      <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+
+      <a href="https://youtube.com/yourhandle" target="_blank"><i class="fab fa-youtube"></i></a>
+
+      <a href="https://tiktok.com/@m.namusisi.winnie" target="_blank"><i class="fab fa-tiktok"></i></a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+  const menuBtn = document.getElementById('menuBtn');
+
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+
+
+
+  function toggleMenu() {
+
+    mobileMenu.classList.toggle('hidden');
+
+  }
+
+
+
+  // Search should now scroll to categories instead of opening WhatsApp
+
+  function searchSite(isMobile = false) {
+
+    const inputId = isMobile ? 'searchMobile' : 'search';
+
+    const q = document.getElementById(inputId).value.trim();
+
+    if (!q) {
+
+      // If nothing typed, still go to categories
+
+      document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
+
+      return;
+
+    }
+
+
+
+    // Optional: highlight matching products or show alert
+
+    document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
+
+
+
+    // Highlight cards containing that word (simple text match)
+
+    const cards = document.querySelectorAll('#categories article');
+
+    cards.forEach(card => {
+
+      const text = card.innerText.toLowerCase();
+
+      if (text.includes(q.toLowerCase())) {
+
+        card.classList.add('ring-2', 'ring-pink-500', 'scale-[1.02]', 'transition');
+
+      } else {
+
+        card.classList.remove('ring-2', 'ring-pink-500', 'scale-[1.02]');
+
+      }
+
+    });
+
+  }
+
+</script>
+
+
+
+
+
+  <!-- Hero -->
+
+  <section class="max-w-6xl mx-auto px-4 py-10">
+
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+
+      <div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">Charming. Cute. Confident.</h2>
+
+        <p class="mt-3 text-lg opacity-90">Shop hand-picked hair accessories, beauty treats and outfits — everything a girl needs to glow up. Fast WhatsApp orders, friendly service.</p>
+
+        <div class="mt-6 flex gap-3">
+
+          <a class="bg-pink-600 text-white px-5 py-3 rounded-full font-semibold shadow-lg" href="https://wa.me/256700228249?text=Hello%20Winnie!%20I%20want%20to%20shop%20now" target="_blank">SHOP NOW</a>
+
+          <a class="border border-pink-300 px-5 py-3 rounded-full font-medium" href="#categories">Browse categories</a>
+
+        </div>
+
+      </div>
+
+<div class="rounded-xl overflow-hidden shadow-lg relative group">
+
+  <!-- Responsive container: aspect ratio for height -->
+
+  <div id="heroCarousel" class="relative w-full aspect-[16/9] sm:aspect-[4/3] bg-gradient-to-r from-pink-100 to-pink-50 overflow-hidden">
+
+    <!-- 4 images layered for fade animation -->
+
+    <img src="display.webp" alt="display 1" class="carousel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+
+    <img src="hea.webp" alt="display 2" class="carousel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+
+    <img src="headbandd.webp" alt="display 3" class="carousel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+
+    <img src="hClip.webp" alt="display 4" class="carousel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+  const imgs = document.querySelectorAll('#heroCarousel .carousel-img');
+
+  let i = 0, timer;
+
+
+
+  function showNext() {
+
+    imgs.forEach((img, idx) => img.style.opacity = idx === i ? 1 : 0);
+
+    i = (i + 1) % imgs.length;
+
+  }
+
+
+
+  function startCarousel() {
+
+    timer = setInterval(showNext, 3000);
+
+  }
+
+
+
+  function stopCarousel() {
+
+    clearInterval(timer);
+
+  }
+
+
+
+  const carousel = document.getElementById('heroCarousel');
+
+  if (carousel) {
+
+    startCarousel();
+
+
+
+    carousel.addEventListener('mouseenter', stopCarousel);
+
+    carousel.addEventListener('mouseleave', startCarousel);
+
+
+
+    // optional hover scrub through images
+
+    carousel.addEventListener('mousemove', e => {
+
+      const rect = carousel.getBoundingClientRect();
+
+      const step = Math.floor((e.clientX - rect.left) / rect.width * imgs.length);
+
+      imgs.forEach((img, idx) => img.style.opacity = idx === step ? 1 : 0);
+
+    });
+
+  }
+
+</script>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Categories -->
+
+  <section id="categories" class="max-w-6xl mx-auto px-4 py-8">
+
+    <h3 class="text-2xl font-bold mb-4">Shop by Category</h3>
+
+    <p class="text-sm opacity-80 mb-6">Click any item and tap <strong>SHOP NOW</strong> to start a WhatsApp chat for order & inquiries.</p>
+
+
+
+    <div class="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+
+      <!-- Category card: Hair Accessories -->
+
+      <article class="bg-white rounded-xl shadow p-3 card hover:shadow-lg">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="hairband.webp" alt="hair accessories" />
+
+          <img src="hairbonnet1.webp" alt="hair accessories 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Hair Accessories</h4>
+
+        <p class="text-sm opacity-80">Benefits: adds instant style, keeps hair tidy, great for gifts. Variety: scrunchies, clips, bows, headbands.</p>
+
+        <div class="mt-3 flex gap-2">
+
+          <a class="flex-1 text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=Hi%20I%20want%20to%20buy%20hair%20accessories" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- Knickers -->
+
+      <article class="bg-white rounded-xl shadow p-3 card">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="knicker.webp" alt="knickers" />
+
+          <img src="WhatsApp Image 2025-10-15 at 11.41.29 AM.webp" alt="knickers 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Knickers & Lingerie</h4>
+
+        <p class="text-sm opacity-80">Benefits: comfort-first, flattering fits, breathable fabrics — perfect everyday essentials.</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=Hello%20I%20would%20like%20knickers" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- Hair Bonnets -->
+
+      <article class="bg-white rounded-xl shadow p-3 card">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="cover.webp" alt="bonnets" />
+
+          <img src="headbandd.webp" alt="bonnets 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Hair Bonnets</h4>
+
+        <p class="text-sm opacity-80">Benefits: protects hair while sleeping, reduces breakage, preserves styles and moisture.</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=I%20need%20hair%20bonnets" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- Headbands -->
+
+      <article class="bg-white rounded-xl shadow p-3 card">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="hea.webp" alt="headbands" />
+
+          <img src="hairHolders.webp" alt="headbands 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Head Bands</h4>
+
+        <p class="text-sm opacity-80">Benefits: instant polish, hides hair days, great for workouts & looks.</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=Headbands%20please" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- Lip Glosses & Oils -->
+
+      <article class="bg-white rounded-xl shadow p-3 card">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="lipOil.webp" alt="lip gloss" />
+
+          <img src="diss.webp" alt="lip gloss 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Lip Glosses & Oils</h4>
+
+        <p class="text-sm opacity-80">Benefits: shine, hydration, and subtle tint — perfect for any look and pocket-friendly.</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=Lip%20gloss%20order" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- Sunglasses -->
+
+      <article class="bg-white rounded-xl shadow p-3 card">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="glasses.webp" alt="sunglasses" />
+
+          <img src="glass2.webp" alt="sunglasses 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Sunglasses</h4>
+
+        <p class="text-sm opacity-80">Benefits: UV protection + instant attitude. Styles for every face shape.</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=Sunglasses%20order" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- More categories: scrunchies, clips, perfumes, outfits, makeup -->
+
+      <article class="bg-white rounded-xl shadow p-3 card">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="hairrbow.webp" alt="scrunchies" />
+
+          <img src="clipper.webp" alt="scrunchies 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Scrunchies & Hair Clips</h4>
+
+        <p class="text-sm opacity-80">Benefits: gentle on hair, playful colours — mix & match sets available.</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=Scrunchies%20set" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="bg-white rounded-xl shadow p-3 card">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="oilperfume.webp" alt="oil perfume" />
+
+          <img src="serum.webp" alt="oil perfume 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Oil Perfumes & Serums</h4>
+
+        <p class="text-sm opacity-80">Benefits: long-lasting scent, concentrated formula — travel-friendly bottles available.</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=Perfume%20enquiry" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="bg-white rounded-xl shadow p-3 card">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="outfit1.webp" alt="outfits" />
+
+          <img src="outfit2.webp" alt="outfits 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Ladies Outfits</h4>
+
+        <p class="text-sm opacity-80">Benefits: curated fits, ready-to-wear sets for work & party. Size guidance via chat.</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=Outfit%20options" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="bg-white rounded-xl shadow p-3 card">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="makeup1.webp" alt="makeup" />
+
+          <img src="makeup2.webp" alt="makeup 2" />
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">Makeup & Beauty</h4>
+
+        <p class="text-sm opacity-80">Benefits: full face basics, travel kits, and occasion-ready picks. Cruelty-conscious options.</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold" href="https://wa.me/256700228249?text=Makeup%20products%20please" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+  <!-- Videos -->
+
+  <section id="videos" class="max-w-6xl mx-auto px-4 py-8">
+
+    <h3 class="text-2xl font-bold mb-4">Latest Videos</h3>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div class="bg-white rounded-xl shadow p-4">
+
+        <div class="video-wrap">
+
+          <iframe src="" title="Demo video" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4">
+
+        <div class="video-wrap">
+
+          <iframe src="" title="Demo video 2" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+ <!-- Footer -->
+
+<footer class="bg-white border-t mt-10">
+
+<div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+<div>
+
+<h4 class="font-bold">WINNIE'S GIRLY STORE</h4>
+
+<p class="text-sm opacity-80 mt-2">Cute accessories & beauty delivered quickly. Chat to order on WhatsApp.</p>
+
+<div class="mt-4 flex gap-4 text-pink-600 text-xl">
+
+<a href="https://instagram.com/yourhandle" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
+<a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+
+<a href="https://youtube.com/yourhandle" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+
+<a href="https://tiktok.com/@yourhandle" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div>
+
+<h5 class="font-semibold">Contact</h5>
+
+<p class="text-sm mt-2">WhatsApp / Orders: <a class="text-pink-600 font-medium" href="https://wa.me/256700228249" target="_blank">+256 700 228 249</a></p>
+
+<p class="text-sm mt-2">Email: <a href="mailto:muyunganwinnie@gmail.com"></a></p>
+
+</div>
+
+
+
+
+
+<div>
+
+<h5 class="font-semibold">Quick Links</h5>
+
+<ul class="mt-2 text-sm space-y-2">
+
+<li><a href="#categories">Shop</a></li>
+
+<li><a href="#videos">Videos</a></li>
+
+<li><a href="https://wa.me/256700228249">Contact on WhatsApp</a></li>
+
+<li><button type="button" onclick="toggleAdminLogin()" class="text-pink-600 hover:underline">Admin Login</button></li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="text-center text-sm py-4 opacity-70">© <span id="year"></span> WINNIE'S GIRLY STORE — All rights reserved</div>
+
+</footer>
+
+
+
+<!-- Admin Login Modal -->
+
+<div id="adminLoginModal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center">
+
+  <div class="bg-white p-6 rounded-xl max-w-sm w-full shadow-2xl">
+
+    <h3 class="text-xl font-bold mb-4 text-pink-600">Admin Login</h3>
+
+    <input id="adminUsername" type="text" placeholder="Username" class="w-full border border-gray-300 px-4 py-2 mb-3 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+
+    <input id="adminPassword" type="password" placeholder="Password" class="w-full border border-gray-300 px-4 py-2 mb-3 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+
+    <div class="flex gap-3">
+
+      <button onclick="adminLogin()" class="flex-1 bg-pink-600 text-white px-4 py-2 rounded font-semibold hover:bg-pink-700 transition">Login</button>
+
+      <button onclick="toggleAdminLogin()" class="flex-1 bg-gray-300 text-gray-700 px-4 py-2 rounded font-semibold hover:bg-gray-400 transition">Cancel</button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- Admin Panel Modal -->
+
+<div id="adminPanel" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center">
+
+  <div class="bg-white p-6 rounded-xl max-w-lg w-full overflow-y-auto max-h-[90vh] shadow-2xl">
+
+    <div class="flex justify-between items-center mb-4">
+
+      <h3 class="text-xl font-bold text-pink-600">Admin Panel</h3>
+
+      <button onclick="toggleAdminPanel()" class="text-gray-600 hover:text-gray-800 text-2xl">✕</button>
+
+    </div>
+
+   
+
+    <!-- Add Product Form -->
+
+    <div class="mb-8 border-b pb-6">
+
+      <h4 class="font-semibold mb-3 text-lg">Add New Product</h4>
+
+      <input id="prodTitle" type="text" placeholder="Product Title (e.g., New Scrunchie Set)" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+
+      <textarea id="prodBenefits" placeholder="Benefits description (e.g., Gentle on hair, vibrant colors)" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded h-24 resize-none focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+
+     
+
+      <label class="block mb-2 font-medium">Primary Image (required):</label>
+
+      <input id="prodImg1Input" type="file" accept="image/*" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
+
+      <div id="previewImg1" class="mb-4"></div>
+
+     
+
+      <label class="block mb-2 font-medium">Hover Image (optional):</label>
+
+      <input id="prodImg2Input" type="file" accept="image/*" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
+
+      <div id="previewImg2" class="mb-4"></div>
+
+     
+
+      <input id="prodWhatsapp" type="text" placeholder="WhatsApp message (e.g., Hi, I want the new scrunchie set)" class="w-full border border-gray-300 px-4 py-2 mb-3 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+
+      <button onclick="addProduct()" class="w-full bg-pink-600 text-white px-4 py-3 rounded font-semibold hover:bg-pink-700 transition">Add Product to Store</button>
+
+    </div>
+
+   
+
+    <!-- Edit Credentials -->
+
+    <div class="mb-8 border-b pb-6">
+
+      <h4 class="font-semibold mb-3 text-lg">Change Admin Credentials</h4>
+
+      <input id="newUsername" type="text" placeholder="New Username" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+
+      <input id="newPassword" type="password" placeholder="New Password" class="w-full border border-gray-300 px-4 py-2 mb-3 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+
+      <button onclick="editCredentials()" class="w-full bg-blue-600 text-white px-4 py-3 rounded font-semibold hover:bg-blue-700 transition">Update Credentials</button>
+
+    </div>
+
+   
+
+    <!-- Manage Products -->
+
+    <div>
+
+      <h4 class="font-semibold mb-3 text-lg">Manage Added Products</h4>
+
+      <p class="text-sm text-gray-600 mb-3">Delete dynamic products below (static ones can't be removed here).</p>
+
+      <div id="adminProductsList" class="space-y-3"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+</script>
+
+
+
+<script>
+
+// Admin Credentials & Products in localStorage
+
+if (!localStorage.getItem('adminCreds')) {
+
+  localStorage.setItem('adminCreds', JSON.stringify({username: 'winnie', password: 'winnie123'}));
+
+}
+
+if (!localStorage.getItem('products')) {
+
+  localStorage.setItem('products', JSON.stringify([]));
+
+}
+
+
+
+// Toggle Login Modal
+
+function toggleAdminLogin() {
+
+  const modal = document.getElementById('adminLoginModal');
+
+  if (modal) modal.classList.toggle('hidden');
+
+}
+
+
+
+// Admin Login
+
+function adminLogin() {
+
+  const creds = JSON.parse(localStorage.getItem('adminCreds') || '{}');
+
+  const user = document.getElementById('adminUsername').value.trim();
+
+  const pass = document.getElementById('adminPassword').value;
+
+  if (user === creds.username && pass === creds.password) {
+
+    toggleAdminLogin();
+
+    toggleAdminPanel();
+
+    document.getElementById('adminUsername').value = '';
+
+    document.getElementById('adminPassword').value = '';
+
+  } else {
+
+    alert('Invalid username or password. Try again!');
+
+  }
+
+}
+
+
+
+// Toggle Admin Panel
+
+function toggleAdminPanel() {
+
+  const panel = document.getElementById('adminPanel');
+
+  if (panel) {
+
+    panel.classList.toggle('hidden');
+
+    if (!panel.classList.contains('hidden')) {
+
+      renderAdminProducts();
+
+    }
+
+  }
+
+}
+
+
+
+// Preview images
+
+document.getElementById('prodImg1Input').addEventListener('change', function(e) {
+
+  previewImage(e, 'previewImg1');
+
+});
+
+document.getElementById('prodImg2Input').addEventListener('change', function(e) {
+
+  previewImage(e, 'previewImg2');
+
+});
+
+
+
+function previewImage(event, previewId) {
+
+  const preview = document.getElementById(previewId);
+
+  preview.innerHTML = '';
+
+  const file = event.target.files[0];
+
+  if (file) {
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+
+      const img = document.createElement('img');
+
+      img.src = e.target.result;
+
+      img.classList.add('preview-img');
+
+      img.alt = 'Preview';
+
+      preview.appendChild(img);
+
+    };
+
+    reader.readAsDataURL(file);
+
+  }
+
+}
+
+
+
+// Add Product
+
+function addProduct() {
+
+  const title = document.getElementById('prodTitle').value.trim();
+
+  const benefits = document.getElementById('prodBenefits').value.trim();
+
+  const whatsapp = document.getElementById('prodWhatsapp').value.trim();
+
+  const file1 = document.getElementById('prodImg1Input').files[0];
+
+  const file2 = document.getElementById('prodImg2Input').files[0];
+
+ 
+
+  if (!title || !benefits || !file1 || !whatsapp) {
+
+    alert('Please fill all required fields: Title, Benefits, Primary Image, and WhatsApp message.');
+
+    return;
+
+  }
+
+ 
+
+  const reader1 = new FileReader();
+
+  reader1.onload = function(e1) {
+
+    const img1 = e1.target.result;
+
+    let img2 = null;
+
+    if (file2) {
+
+      const reader2 = new FileReader();
+
+      reader2.onload = function(e2) {
+
+        img2 = e2.target.result;
+
+        saveProduct(title, benefits, img1, img2, whatsapp);
+
+      };
+
+      reader2.readAsDataURL(file2);
+
+    } else {
+
+      saveProduct(title, benefits, img1, img2, whatsapp);
+
+    }
+
+  };
+
+  reader1.readAsDataURL(file1);
+
+}
+
+
+
+function saveProduct(title, benefits, img1, img2, whatsapp) {
+
+  let products = JSON.parse(localStorage.getItem('products') || '[]');
+
+  products.push({title, benefits, img1, img2: img2 || null, whatsapp});
+
+  localStorage.setItem('products', JSON.stringify(products));
+
+ 
+
+  renderProducts();
+
+  renderAdminProducts();
+
+  alert(`${title} has been added successfully!`);
+
+ 
+
+  // Clear form
+
+  document.getElementById('prodTitle').value = '';
+
+  document.getElementById('prodBenefits').value = '';
+
+  document.getElementById('prodWhatsapp').value = '';
+
+  document.getElementById('prodImg1Input').value = '';
+
+  document.getElementById('prodImg2Input').value = '';
+
+  document.getElementById('previewImg1').innerHTML = '';
+
+  document.getElementById('previewImg2').innerHTML = '';
+
+}
+
+
+
+// Change Credentials
+
+function editCredentials() {
+
+  const newUser = document.getElementById('newUsername').value.trim();
+
+  const newPass = document.getElementById('newPassword').value;
+
+  if (!newUser || !newPass) {
+
+    alert('Please enter both a new username and password.');
+
+    return;
+
+  }
+
+  localStorage.setItem('adminCreds', JSON.stringify({username: newUser, password: newPass}));
+
+  alert('Admin credentials updated successfully! Use new ones next login.');
+
+  document.getElementById('newUsername').value = '';
+
+  document.getElementById('newPassword').value = '';
+
+}
+
+
+
+// Render Dynamic Products in Grid
+
+const categoriesGrid = document.querySelector('#categories .grid');
+
+function renderProducts() {
+
+  const products = JSON.parse(localStorage.getItem('products') || '[]');
+
+  let dynamicHTML = '';
+
+  products.forEach(prod => {
+
+    dynamicHTML += `
+
+      <article class="bg-white rounded-xl shadow p-3 card hover:shadow-lg">
+
+        <div class="hover-rotate rounded-md overflow-hidden">
+
+          <img src="${prod.img1}" alt="${prod.title}" />
+
+          ${prod.img2 ? `<img src="${prod.img2}" alt="${prod.title} hover" />` : ''}
+
+        </div>
+
+        <h4 class="mt-3 font-semibold">${prod.title}</h4>
+
+        <p class="text-sm opacity-80">${prod.benefits}</p>
+
+        <div class="mt-3">
+
+          <a class="block text-center bg-pink-600 text-white py-2 rounded-md font-semibold hover:bg-pink-700 transition" href="https://wa.me/256700228249?text=${encodeURIComponent(prod.whatsapp)}" target="_blank">SHOP NOW</a>
+
+        </div>
+
+      </article>
+
+    `;
+
+  });
+
+ 
+
+  // Remove old dynamic and append new
+
+  const existingDynamic = categoriesGrid.querySelectorAll('article.dynamic-product');
+
+  existingDynamic.forEach(el => el.remove());
+
+ 
+
+  if (dynamicHTML) {
+
+    const tempDiv = document.createElement('div');
+
+    tempDiv.innerHTML = dynamicHTML;
+
+    tempDiv.querySelectorAll('article').forEach(article => {
+
+      article.classList.add('dynamic-product');
+
+      categoriesGrid.appendChild(article);
+
+    });
+
+  }
+
+}
+
+
+
+// Render List for Delete in Admin
+
+function renderAdminProducts() {
+
+  const list = document.getElementById('adminProductsList');
+
+  if (!list) return;
+
+  const products = JSON.parse(localStorage.getItem('products') || '[]');
+
+  if (products.length === 0) {
+
+    list.innerHTML = '<p class="text-gray-500 italic">No products added yet.</p>';
+
+    return;
+
+  }
+
+  list.innerHTML = products.map((prod, idx) => `
+
+    <div class="border border-gray-200 p-3 rounded flex justify-between items-center bg-gray-50">
+
+      <div>
+
+        <span class="font-medium">${prod.title}</span>
+
+        <p class="text-xs text-gray-600 mt-1">Images: (base64 previews)</p>
+
+      </div>
+
+      <button onclick="deleteProduct(${idx})" class="text-red-600 hover:text-red-800 font-semibold">Delete</button>
+
+    </div>
+
+  `).join('');
+
+}
+
+
+
+// Delete Product
+
+function deleteProduct(idx) {
+
+  if (!confirm('Are you sure you want to delete this product?')) return;
+
+  let products = JSON.parse(localStorage.getItem('products') || '[]');
+
+  products.splice(idx, 1);
+
+  localStorage.setItem('products', JSON.stringify(products));
+
+  renderProducts();
+
+  renderAdminProducts();
+
+  alert('Product deleted.');
+
+}
+
+
+
+// Initial Load
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  renderProducts();
+
+});
+
+</script>
+
+
+
+</body>
+
+</html>
